@@ -1,6 +1,32 @@
 
 @import "tailwindcss";
 
+@font-face {
+  font-family: EduAUVICWANTArrows;
+  src: url('@/assets/fonts/GloriaHallelujah-Regular.ttf');
+}
+@font-face {
+  font-family: Poppins;
+  src: url('@/assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: Tektur-Regular;
+  src: url('@/assets/fonts/Tektur-Regular.ttf');
+}
+@font-face {
+  font-family: Oswald-Regular;
+  src: url('@/assets/fonts/Oswald-Light.ttf');
+}
+@font-face {
+  font-family: Dosis-Medium;
+  src: url('@/assets/fonts/Dosis-Medium.ttf');
+}
+
+
+
+
+
+
 *,
 *::before,
 *::after {
@@ -8,30 +34,17 @@
   margin: 0;
   font-weight: normal;
 }
-
 body {
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   color: black;
   background: white;
-  transition:
-    color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins',sans-serif;
+  font-size: 14px;
+}
+
+@layer components {
+  .active-link span{
+    @apply text-amber-700;
+}
 }

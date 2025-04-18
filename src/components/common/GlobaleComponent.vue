@@ -1,12 +1,10 @@
 <template>
   <div class="w-full h-screen flex flex-col">
     <HeaderComponent/>
-    <div class="h-full w-full overflow-auto">
+    <div class="h-full w-full max-h-screen overflow-y-auto bg-amber-100">
       <RouterView />
-    </div>
-    
+    </div>   
   </div>
-
 </template>
 
 <script setup >
