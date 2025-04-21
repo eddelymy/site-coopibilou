@@ -35,13 +35,15 @@
   font-weight: normal;
 }
 body {
-  height: 100vh;
-  width: 100%;
-  color: black;
-  background: white;
-  font-family: 'Poppins',sans-serif;
-  font-size: 14px;
+  min-height: 100vh;
+  width: 100%; 
+  color: black; 
+  background: white; 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 14px; 
+  min-width: 100vw;
 }
+
 
 @layer components {
   .active-link span{

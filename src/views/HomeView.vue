@@ -4,7 +4,7 @@
     relative">
     <div 
       style="font-family:Dosis-Medium ; font-size: 20px;"
-      class="bg-black opacity-55 w-[900px] z-50 text-white rounded-md p-8 flex flex-col gap-4 absolute bottom-7 left-7">
+      class="bg-black opacity-55 max-w-[900px] text-white rounded-md p-8 flex flex-col gap-4 absolute bottom-7 left-2 right-2 min-lg:left-7">
 
       <div>
 
