@@ -40,13 +40,24 @@ body {
   color: black; 
   background: white; 
   font-family: 'Poppins', sans-serif; 
-  font-size: 14px; 
+  font-size: 13px; 
   min-width: 100vw;
 }
 
 
-@layer components {
-  .active-link span{
-    @apply text-amber-700;
-}
+/* @layer components {
+  hr {
+    @apply bg-amber-500 h-[1px] border-0;
+  }
+} */
+@layer base {
+  hr {
+    @apply bg-amber-500 h-[1px] border-0;
+  }
+  input[type="checkbox"]{
+    @apply border-[#e8e8e8] h-[12px] accent-pink-500 cursor-pointer field-sizing-content;
+  }
+  .btn{
+    @apply bg-amber-600 text-white px-2 py-1 text-[11px] rounded-md hover:bg-amber-400 hover:text-slate-700
+  }
 }

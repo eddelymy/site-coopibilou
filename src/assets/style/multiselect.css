@@ -1,0 +1,65 @@
+.multiselect, .multiselect__tags {
+  min-height: 36px !important;
+}
+.multiselect__select {
+  height: 36px !important;
+}
+.multiselect, .multiselect__input, .multiselect__single, .multiselect__tags {
+  font-size: 12px !important;
+}
+.multiselect__tags{
+  border-radius: 0.375rem !important;
+  border: 1px solid #e8e8e8 !important;
+  /*padding: 7px 40px 0 8px !important;*/
+}
+.multiselect.error .multiselect__tags{
+  border: 1px solid rgb(225 29 72) !important;
+}
+.multiselect__tag {
+  background: oklch(71.8% 0.202 349.761) !important;
+  margin: 0 !important;
+}
+span.multiselect__option--highlight {
+  background: oklch(71.8% 0.202 349.761);
+}
+span.multiselect__option--highlight::after {
+  background:oklch(71.8% 0.202 349.761);
+}
+input.multiselect__input:focus {
+  outline: none !important;
+  --tw-ring-color: transparent;
+}
+
+.multiselect__spinner::before, .multiselect__spinner::after {
+  border-color: oklch(71.8% 0.202 349.761) transparent transparent !important;
+}
+
+.multiselect__spinner {
+  height: 33px !important;
+}
+.multiselect__nowrap {
+  white-space: nowrap !important;
+}
+.td-multi-select .multiselect {
+  min-height: 1.7rem !important;
+  align-items: center !important;
+}
+.td-multi-select .multiselect__tags {
+  min-height: 1.7rem !important;
+  padding-top: 3% !important;
+}
+.td-multi-select .multiselect__select {
+  height: 1.7rem !important;
+} 
+.td-multi-select .multiselect__nowrap {
+  white-space: nowrap !important;
+}
+.td-multi-select .multiselect__single{
+  height: 0px !important;
+  white-space: nowrap !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0px !important;
+}
+.multiselect__content-wrapper , .multiselect__content{
+  z-index: 50 !important;
+}

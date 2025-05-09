@@ -1,5 +1,5 @@
 <template>
-  <div class="h-18 relative shadow shadow-amber-300 border-b border-b-slate-200 flex items-center justify-between px-10 bg-white text-black w-full">
+  <div class="h-18 relative shadow shadow-amber-100 border-b border-b-slate-200 flex items-center justify-between px-10 bg-white text-black w-full">
     <a href="/" class="flex items-center">
       <img width="40" src="@/assets/images/logo.png" class=" -rotate-10" />
       <div class="flex" style="font-family: EduAUVICWANTArrows;font-size: 23px;">
@@ -29,7 +29,7 @@
       <div 
         v-show="open" 
         style="font-family: Oswald-Regular;font-size: 18px;"
-        class="min-lg:hidden rounded-md bg-white z-50 p-5 absolute right-4 top-20 w-[300px]">
+        class="min-lg:hidden rounded-md bg-white z-50 p-5 absolute right-4 top-20 w-[300px] border border-slate-300">
         <div class="flex justify-end mb-5">
           <button type="button" class="text-black hover:text-amber-600" @click="closeMenu">
             <XMarkIcon class="w-5"/>

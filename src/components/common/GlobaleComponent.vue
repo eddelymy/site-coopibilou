@@ -4,7 +4,7 @@
       <HeaderComponent/>
     </div>
     
-    <div class="h-full w-full max-h-screen overflow-y-auto bg-amber-100">
+    <div class="h-full w-full max-h-screen overflow-y-auto bg-amber-50">
       <RouterView />
     </div>   
   </div>
