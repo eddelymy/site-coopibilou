@@ -32,7 +32,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 body {
   min-height: 100vh;
@@ -51,6 +51,9 @@ body {
   }
 } */
 @layer base {
+  h2{
+    @apply font-bold text-xl font-[EduAUVICWANTArrows]
+  }
   hr {
     @apply bg-amber-500 h-[1px] border-0;
   }
