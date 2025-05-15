@@ -6,7 +6,7 @@
                 :key="tab.title"
                 class="py-2 px-5 cursor-pointer me-2 text-[15px]"
                 :class="{
-                'text-gray-600': tab.hash !== activeTabHash,
+                'text-gray-500': tab.hash !== activeTabHash,
                 'border-b-2 border-b-orange-600 text-gray-900 ': tab.hash === activeTabHash
                 }"
                 @click="activeTabHash = tab.hash"
