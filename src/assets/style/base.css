@@ -63,4 +63,32 @@ body {
   .btn{
     @apply bg-amber-600 text-white px-2 py-1 text-[11px] rounded-md hover:bg-amber-400 hover:text-slate-700
   }
+  textarea {
+    @apply p-3 h-24 w-full rounded-md border border-[#e8e8e8] text-black text-xs focus:outline-none focus:ring-0 focus:border-slate-300 placeholder:text-zinc-300 read-only:bg-gray-100;
+  }
+  input[type='text'],
+  input[type='password'],
+  input[type='search'],
+  input[type='number'],
+  input[type='email'] {
+    @apply w-full px-3 h-9 rounded-md border border-slate-300 text-black text-xs placeholder:text-zinc-300 focus:outline-none focus:ring-0;
+  }
+  
+  input[type='text']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  input[type='number']:focus,
+  input[type='email']:focus,select:focus {
+    @apply border-orange-300; 
+  }
+  textarea:focus,
+  [type='text']:focus {
+    @apply border-orange-300; 
+  }
+   button[type="submit"] {
+    @apply h-8 px-2 py-1 bg-pink-600 text-white rounded flex items-center justify-center gap-2 focus:outline-none focus:ring-0 disabled:opacity-50 hover:opacity-90;
+  }
+  .error-message {
+    @apply text-rose-600 text-[11px];
+  }
 }
