@@ -9,7 +9,10 @@
       </div>
       
       <div  class="mt-9 grid content-center h-full  md:grid-cols-2 xl:grid-cols-3 gap-7 justify-items-center">
-        <div v-if="loading['products.index']" class="flex w-full justify-center items-center col-span-3">
+        <div v-if="!loading['products.index'] && items.length === 0" class="flex w-full justify-center items-center col-span-3">
+          Aucun élément à afficher 
+        </div>
+        <div v-else-if="loading['products.index']" class="flex w-full justify-center items-center col-span-3">
           <VueSpinnerPie size="70" color="orange" />
         </div>
         <div v-else v-for="(item,index) in items" :key="index" class="flex flex-col w-80 rounded-md bg-white hover:bg-amber-50 shadow border border-slate-300 hover:scale-105 ">
@@ -124,7 +127,7 @@ async function sorted(sortValue,sortOrder){
 
 }
 function onFilter(newFilter) {
-  filters.value = filters.value.filter(item => item.key !== newFilter.key && item.value !== newFilter.value)
+  filters.value = filters.value.filter(item => item.key !== newFilter.key)
   filters.value.push(newFilter)
   
   
@@ -134,7 +137,7 @@ function onFilter(newFilter) {
   fetchData()
 }
 function onCancelFilter(newFilter){
-  const result = filters.value.filter( item => item.key !== newFilter.key && item.value !== newFilter.value)
+  const result = filters.value.filter( item => item.key !== newFilter.key)
   filters.value = [...result]
   filter.value = {filters:filters.value}
   page.value = 0

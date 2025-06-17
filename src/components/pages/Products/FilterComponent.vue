@@ -2,7 +2,12 @@
   <div class="py-2 px-8 min-w-[300px]">
     <div class="p-5 flex flex-col gap-5">
       <div class="flex justify-between gap-4 items-center">
-        <span class=" font-extrabold text-[14px]">Categorie</span>
+        <div class="flex gap-2">
+          <span class=" font-extrabold text-[14px]">Categorie</span>
+          <button type="button" v-if="category.length !== 0 " class="bg-white rounded-full text-pink-600 " @click="initCategory">
+            <ArrowPathIcon class="w-3 cursor-pointer "/>
+          </button>
+        </div>
         <button type="button" @click="addFilter('category')">
           <ChevronDownIcon
             class="w-4 cursor-pointer"
@@ -25,7 +30,12 @@
     <hr />
     <div class="p-5 flex flex-col gap-5">
       <div class="flex justify-between gap-4 items-center">
-        <span class="font-extrabold text-[14px]">Base</span>
+        <div class="flex gap-2">
+          <span class="font-extrabold text-[14px]">Base</span>          
+          <button type="button" v-if="base.length !== 0 " class="bg-white rounded-full text-pink-600 " @click="initBase">
+            <ArrowPathIcon class="w-3 cursor-pointer "/>
+          </button>
+        </div>
         <button type="button" @click="addFilter('base')">
           <ChevronDownIcon
             class="w-4 cursor-pointer"
@@ -44,7 +54,12 @@
     <hr />
     <div class="p-5 flex flex-col gap-5">
       <div class="flex justify-between gap-4 items-center">
-        <span class="font-extrabold text-[14px]">Couleur</span>
+        <div class="flex gap-2">
+          <span class="font-extrabold text-[14px]">Couleur</span>          
+          <button type="button" v-if="color.length !== 0 " class="bg-white rounded-full text-pink-600 " @click="initColor">
+            <ArrowPathIcon class="w-3 cursor-pointer "/>
+          </button>
+        </div>
         <button type="button" @click="addFilter('color')">
           <ChevronDownIcon
             class="w-4 cursor-pointer"
@@ -90,7 +105,7 @@
   </div>
 </template>
 <script setup>
-import {ChevronDownIcon} from '@heroicons/vue/24/outline'
+import {ChevronDownIcon, ArrowPathIcon} from '@heroicons/vue/24/outline'
 import {ChevronUpIcon} from '@heroicons/vue/24/outline'
 import {ref} from 'vue'
 
@@ -163,6 +178,25 @@ function filterByColor(evnt){
       value: [evnt.target.value]
     })
   
+}
+
+function initCategory(){
+  category.value = []
+  emit('cancel',{
+      key: 'category'
+    })
+}
+function initBase(){
+  base.value = []
+  emit('cancel',{
+      key: 'base'
+    })
+}
+function initColor(){
+  color.value = []
+  emit('cancel',{
+      key: 'color'
+    })
 }
 
 </script>
