@@ -54,10 +54,13 @@ body {
   h2{
     @apply font-bold text-xl font-[EduAUVICWANTArrows]
   }
+  select {
+    @apply h-7 pr-6 w-full rounded-md border border-[#e8e8e8] text-black text-xs placeholder:text-zinc-300 focus:outline-none focus:ring-0 focus:border-slate-300;
+  }
   hr {
     @apply bg-amber-500 h-[1px] border-0;
   }
-  input[type="checkbox"]{
+  input[type="checkbox"], input[type="radio"]{
     @apply border-[#e8e8e8] h-[12px] accent-pink-500 cursor-pointer field-sizing-content;
   }
   .btn{
