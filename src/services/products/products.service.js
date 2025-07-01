@@ -20,7 +20,6 @@ export default {
         }
       })
     } catch (error) {
-      console.log(error)
       const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
       flash(message, 'error')
     } finally {
@@ -29,10 +28,14 @@ export default {
   },
   async getById(id) {
     try {
-      return await http.get(routes.getById.url(id))
+      loadingStore.setLoading('product.index', true)
+
+      return await axios.get(routes.getById.url(id))
     } catch (error) {
       const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
       flash(message, 'error')
+    }finally{
+      loadingStore.setLoading('product.index', false)
     }
   },
   async getAll() {

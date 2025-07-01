@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 export const useLoadingStore = defineStore('loading', () => {
   const loading = ref({
-  
     products: false,
+    'product.index':false,
     'products.index': false,
     'products.add': false,
     'products.edit': false,

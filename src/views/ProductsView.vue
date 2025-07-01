@@ -26,7 +26,14 @@
               <div class="border w-[150px] justify-center border-slate-400 rounded-md flex items-center">
                 {{ item.width }} x {{ item.height }}
               </div>
-              <button type="button" class="btn px-4">Voir le produit</button>
+              <button type="button" class="btn px-4">
+                <router-link
+                  :to="{ path: '/produit/' + item.id }"
+                >
+                  Voir le produit
+                </router-link>
+                
+              </button>
             </div>
           </div>
         </div>
@@ -74,7 +81,7 @@ const totalPages = ref(0)
 const totalItems = ref(0)
 const filter = ref([])
 const filters = ref([])
-const apiUrl = ref("http://localhost:3000")
+const apiUrl = "http://localhost:3000"
 
 onMounted(()=>{
   fetchData()
