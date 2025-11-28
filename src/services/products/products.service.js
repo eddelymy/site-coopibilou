@@ -42,7 +42,7 @@ export default {
     try {
       loadingStore.setLoading('products', true)
 
-      return await http.get(routes.get.url)
+      return await axios.get(routes.get.url)
     } catch (error) {
       const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
       flash(message, 'error')
@@ -54,7 +54,7 @@ export default {
     try {
       loadingStore.setLoading('products.add', true)
 
-      return await http.post(routes.post.url, product)
+      return await axios.post(routes.post.url, product)
     } catch (error) {
       const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
       flash(message, 'error')
@@ -64,7 +64,7 @@ export default {
   },
   async deleteProduct(id) {
     try {
-      return await http.delete(routes.delete.url(id))
+      return await axios.delete(routes.delete.url(id))
     } catch (error) {
       const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
       flash(message, 'error')

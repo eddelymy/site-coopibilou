@@ -9,6 +9,10 @@ export const useLoadingStore = defineStore('loading', () => {
     'products.add': false,
     'products.edit': false,
     'products.delete': false,
+    cartProducts:false,
+    'cartProducts.index': false,
+    'cartProducts.add': false,
+    'cartProducts.delete': false,
   })
 
   function setLoading(key, value) {

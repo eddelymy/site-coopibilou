@@ -40,7 +40,7 @@
                     <button type="button" class="bg-red-200 rounded-bl-md rounded-br-md cursor-pointer" @click="disincrement">-</button>
                   </div>
               </div>
-              <button type="submit" class="cursor-pointer w-1/2">Ajouter au panier</button>
+              <button type="submit" class="cursor-pointer w-1/2" @click="addProduct">Ajouter au panier</button>
 
             </div>
         </div>
@@ -50,6 +50,7 @@
 </template>
 
 <script setup>
+import cartService from '@/services/cart/cart.service'
 import {VueSpinnerPie} from 'vue3-spinners'
 import productsService from '@/services/products/products.service'
 import {ref, onMounted} from 'vue'
@@ -88,6 +89,15 @@ function disincrement(){
     qte.value  = -- qte.value
   }
   
+}
+async function addProduct(){
+  try{
+    const response = await cartService.addProduct({id_product:product.value.id , quantite:qte.value })
+     flash(response?.data?.message)
+  }catch(error){
+    const message = error?.response?.data?.message || 'Erreur! Veuillez réessayer plus tard!'
+    flash(message, 'error')
+  }
 }
 
 </script>
